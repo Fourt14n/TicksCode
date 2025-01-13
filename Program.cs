@@ -13,18 +13,13 @@ namespace TicksCode
         static void Main(string[] args)
         {
             TickCode code = new TickCode();
-            Console.WriteLine(code);
+            Console.WriteLine($"Seu código gerado é: {code}");
 
             string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             string path = Path.Combine(docPath, "TickCodes");
             string separator = " | ";
             // Se não existir o arquivo, ele cria na pasta de documentos
             File.AppendAllText(Path.Combine(path, "codes.txt"), (code.ToString() + separator));
-
-
-
-
-
 
         }
     }
